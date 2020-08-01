@@ -3,6 +3,7 @@ const path = require('path');
 const hbs = require('hbs');
 const getForecast = require('./utils/forecast')
 const app = express();
+const port = process.env.PORT || 3000
 
 app.use(express.static(path.join(__dirname, '../public')))
 const viewPath = path.join(__dirname, '../template/views')
@@ -59,10 +60,7 @@ app.get('/help/*', (req, res) => {
     res.send('<h1> Help article not found! </h1>')
 })
 
-// app.get('*', (req, res) => {
-//     res.send(` 404 Not Found!! `)
-// })
 
-app.listen(3000, () => {
-    console.log('Server has started!')
+app.listen(port, () => {
+    console.log('Server has started at port '+ port)
 })
