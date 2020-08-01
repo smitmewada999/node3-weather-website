@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        h1 {
+            color: black;
+            margin-top: 30px;
+            height: 50px;
+            font-size: 64px;
+        }
+        a {
+            text-decoration: none;
+            font-size: 24px;
+            
+        }
+        .header {
+            margin-top: 20px;
+            font-size: 24px;
+            color: grey;
+            width: 100%;
+            
+        }
+    .nav-links {
+        word-spacing: 20px;
+    }
+
+    .footer {
+        position: absolute;
+        top: 500px;
+        width: 90%;
+    }
+    .body {
+        margin-left: 100px;
+    }
+    b {
+        font-size: 24px;
+    }
+    .city {
+        color: grey;
+        font-size: 36px;
+    }
+      
+        
+    </style>
+    <title>Weather</title>
+</head>
+<body>
+    <div class="body">
+        <h1>{{>header}}</h1>
+    
+    <div class="header">
+        <h1 class="city">{{query}}</h1>
+        weather Page
+        <h4>{{error}}</h4>
+    </div>
+        {{>footer}}
+    </div>
+    
+</body>
+</html> 
